@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/FrostweepGames/GCSpeechRecognition/V1/GCSR_Examples/GCSR_DoCommandsExample/GCSR_DoCommandsExample.unity
-    guid: bdace3275a91b3041a10a8653e87de26
+    path: Assets/_VC_Racing/Scenes/Start Scene.unity
+    guid: e8efc456aed5010498ee50c409136376
+  - enabled: 1
+    path: Assets/_VC_Racing/Scenes/Demo.unity
+    guid: 9c67086d493dee64cbbb26617c987b42
   m_configObjects: {}

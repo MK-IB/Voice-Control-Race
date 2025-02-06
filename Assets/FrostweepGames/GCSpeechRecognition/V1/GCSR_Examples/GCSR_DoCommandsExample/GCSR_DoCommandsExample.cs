@@ -1,6 +1,7 @@
 ﻿using System;
 using FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.Tools;
 using UnityEngine;
+using UnityEngine.Android;
 using UnityEngine.UI;
 
 namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1.Examples
@@ -21,6 +22,7 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1.Examples
 		private Dropdown _languageDropdown;
 
 		private RectTransform _objectForCommand;
+		[SerializeField] private InfiniteRoad carMovement;
 
 		private void Start()
 		{
@@ -71,6 +73,7 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1.Examples
 			{
 				_speechRecognition.SetMicrophoneDevice(_speechRecognition.GetMicrophoneDevices()[0]);
 			}
+			StartRecordButtonOnClickHandler();
 		}
 
 		private void OnDestroy()
@@ -118,15 +121,17 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1.Examples
 
 		private void EndTalkigEventHandler(AudioClip clip, float[] raw)
 		{
+			Debug.Log("REC ENDDDD");
 			FinishedRecordEventHandler(clip, raw);
+			StopRecordButtonOnClickHandler();
 		}
 
 		private void FinishedRecordEventHandler(AudioClip clip, float[] raw)
 		{
 			if (_startRecordButton.interactable)
 			{
-				_speechRecognitionState.color = Color.yellow;
 			}
+			_speechRecognitionState.color = Color.yellow;
 
 			if (clip == null)
 				return;
@@ -190,6 +195,7 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1.Examples
 			switch (command)
 			{
 				case "move up":
+					carMovement.EnableMovement();
 					_objectForCommand.anchoredPosition += Vector2.up * speed;
 					break;
 				case "move down":
@@ -213,8 +219,12 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1.Examples
 				case "rotate right":
 					_objectForCommand.Rotate(0, 0, -30);
 					break;
+				case "go":
+					Debug.Log("CAR MOVEMENT +++ CALLED:");
+					carMovement.EnableMovement();
+					break;
 				default:
-					Debug.Log("NOT FOUND COMAND IN LIST OF HANDLERS");
+					Debug.Log("NOT FOUND COMMAND IN LIST OF HANDLERS");
 					break;
 			}
 		}

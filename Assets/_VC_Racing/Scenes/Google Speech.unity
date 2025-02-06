@@ -949,7 +949,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1070416903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1202,7 +1202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   road1: {fileID: 1638565216}
   road2: {fileID: 1031916461}
-  roadSpeed: 3
+  roadSpeed: 0
 --- !u!1 &1399144987
 GameObject:
   m_ObjectHideFlags: 0

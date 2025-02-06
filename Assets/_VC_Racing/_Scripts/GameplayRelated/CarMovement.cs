@@ -22,6 +22,12 @@ public class InfiniteRoad : MonoBehaviour
         CheckAndRepositionRoads();
     }
 
+    public void EnableMovement()
+    {
+        //Debug.Log("CALLED FROM SPEECHHH...");
+        roadSpeed += 1;
+    }
+
     void MoveRoads()
     {
         // Move both roads downward
