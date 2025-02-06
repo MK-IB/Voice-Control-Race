@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="D:\RiderData\RiderCache\extResources" t="IncludeRecursive" />
+    <e p="D:\RiderData\RiderCache\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_Voice-Control-Race.-510577128.00" t="ExcludeRecursive" />
+    <e p="D:\UNITY\Projects\OTHER_PROJECTS\Voice-Control-Race" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="_VC_Racing" t="Include">
+          <e p="_Scripts" t="Include">
+            <e p="ControllerRelated" t="Include">
+              <e p="GameController.cs" t="Include" />
+              <e p="MainController.cs" t="Include" />
+              <e p="UIController.cs" t="Include" />
+            </e>
+            <e p="GameplayRelated" t="Include">
+              <e p="CarMovement.cs" t="Include" />
+            </e>
+            <e p="SpeechRelated" t="Include">
+              <e p="AudioRecorder.cs" t="Include" />
+              <e p="CarController.cs" t="Include" />
+              <e p="GoogleSpeechToText.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="FrostweepGames" t="Include">
+          <e p="_Generic" t="Include">
+            <e p="Core" t="Include">
+              <e p="IService.cs" t="Include" />
+              <e p="ServiceLocator.cs" t="Include" />
+            </e>
+            <e p="Editor" t="Include">
+              <e p="DefineProcessing.cs" t="Include" />
+            </e>
+            <e p="Networking" t="Include">
+              <e p="NetworkConstants.cs" t="Include" />
+              <e p="NetworkEnumerators.cs" t="Include" />
+              <e p="Networking.cs" t="Include" />
+              <e p="NetworkRequest.cs" t="Include" />
+              <e p="NetworkResponse.cs" t="Include" />
+            </e>
+            <e p="Tools" t="Include">
+              <e p="Attributes" t="Include">
+                <e p="PasswordFieldAttribute.cs" t="Include" />
+                <e p="ReadOnlyAttribute.cs" t="Include" />
+              </e>
+              <e p="CustomMicrophone.cs" t="Include" />
+            </e>
+          </e>
+          <e p="GCSpeechRecognition" t="Include">
+            <e p="README.txt" t="Include" />
+            <e p="Scripts" t="Include">
+              <e p="Configs" t="Include">
+                <e p="GeneralConfig.cs" t="Include" />
+              </e>
+              <e p="Converters" t="Include">
+                <e p="AudioConvert.cs" t="Include" />
+                <e p="Converters" t="Include">
+                  <e p="AudioClip2ByteConverter.cs" t="Include" />
+                  <e p="AudioClip2PCMConverter.cs" t="Include" />
+                  <e p="AudioClipRaw2ByteConverter.cs" t="Include" />
+                  <e p="AudioClipRaw2PCMConverter.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Editor" t="Include">
+                <e p="DefineProcessing.cs" t="Include" />
+                <e p="WelcomeDialog.cs" t="Include" />
+              </e>
+              <e p="Utilites" t="Include">
+                <e p="AudioTools.cs" t="Include" />
+              </e>
+            </e>
+            <e p="V1" t="Include">
+              <e p="GCSR_Examples" t="Include">
+                <e p="GCSR_DoCommandsExample" t="Include">
+                  <e p="GCSR_DoCommandsExample.cs" t="Include" />
+                </e>
+                <e p="GCSR_Example_1" t="Include">
+                  <e p="GCSR_Example.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="Core" t="Include">
+                  <e p="Interfaces" t="Include">
+                    <e p="IMediaManager.cs" t="Include" />
+                    <e p="ISpeechRecognitionManager.cs" t="Include" />
+                    <e p="IVoiceDetectionManager.cs" t="Include" />
+                  </e>
+                  <e p="Managers" t="Include">
+                    <e p="MediaManager.cs" t="Include" />
+                    <e p="SpeechRecognitionManager.cs" t="Include" />
+                    <e p="VoiceDetectionManager.cs" t="Include" />
+                  </e>
+                  <e p="Model" t="Include">
+                    <e p="Model.cs" t="Include" />
+                  </e>
+                  <e p="Settings" t="Include">
+                    <e p="Config.cs" t="Include" />
+                    <e p="Constants.cs" t="Include" />
+                    <e p="Enumerators.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="GCSpeechRecognition.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="LICENSE_INFO.txt" t="Include" />
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+            <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+            <e p="TMP_Bitmap.shader" t="Include" />
+            <e p="TMP_SDF Overlay.shader" t="Include" />
+            <e p="TMP_SDF SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+            <e p="TMP_SDF-Mobile SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface.shader" t="Include" />
+            <e p="TMP_SDF.shader" t="Include" />
+            <e p="TMP_Sprite.shader" t="Include" />
+            <e p="TMPro.cginc" t="Include" />
+            <e p="TMPro_Mobile.cginc" t="Include" />
+            <e p="TMPro_Properties.cginc" t="Include" />
+            <e p="TMPro_Surface.cginc" t="Include" />
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+            <e p="EmojiOne.json" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+      <e p="Voice-Control-Race.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>

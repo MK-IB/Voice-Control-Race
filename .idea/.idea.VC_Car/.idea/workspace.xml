@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6b305221-5dc4-4c3b-a6b6-ab75828b7d4d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/GCSpeechRecognition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/Core/Interfaces/IMediaManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/GCSR_Examples/GCSR_DoCommandsExample/GCSR_DoCommandsExample.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/244D09D0-67FC-4992-B455-70165F29CCA1/d3/f88eac1f/BaseSpeechRecognizer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/GameplayRelated/SpeechToWord.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/GameplayRelated/CarMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/ControllerRelated/UIController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/ControllerRelated/GameController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/SpeechRelated/GoogleSpeechToText.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/GameplayRelated/SpeechTest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/SpeechRelated/CarController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/SpeechRelated/AudioRecorder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.huggingface.api@8d0231780e/Examples/Scripts/SpeechRecognitionExample.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/ControllerRelated/MainController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/Core/Managers/MediaManager.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Library/PackageCache/com.huggingface.api@8d0231780e/Examples/Scripts/SpeechRecognitionExample.cs" />
+        <option value="$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/GameplayRelated/SpeechTest.cs" />
+        <option value="$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/GameplayRelated/SpeechToWord.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameVoiceControl/Scripts/Test/Controller.cs" />
+        <option value="$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/SpeechRelated/CarController.cs" />
+        <option value="$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/SpeechRelated/AudioRecorder.cs" />
+        <option value="$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/SpeechRelated/GoogleSpeechToText.cs" />
+        <option value="$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/GameplayRelated/CarMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/ControllerRelated/UIController.cs" />
+        <option value="$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/ControllerRelated/MainController.cs" />
+        <option value="$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/ControllerRelated/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/GCSR_Examples/GCSR_DoCommandsExample/GCSR_DoCommandsExample.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="2sZ34nKVx88s62CwYzOYt14LZV9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
