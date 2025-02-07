@@ -72,14 +72,18 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1
 		{
 			IsRecording = true;
 			DetectVoice = true;
+			Debug.Log("ENABLEDD ** LISTENING");
 		}
 
 		public void Update()
-        {
+		{
+			#if UNITY_EDITOR
+			return;
+			#endif
 #if !FG_MPRO || UNITY_EDITOR
             /*if (IsRecording)
             {*/
-                _currentSamplePosition = Microphone.GetPosition(MicrophoneDevice);
+            _currentSamplePosition = Microphone.GetPosition(MicrophoneDevice);
                 CustomMicrophone.GetData(_currentAudioSamples, 0, _microphoneWorkingAudioClip);
 
 				if (DetectVoice)

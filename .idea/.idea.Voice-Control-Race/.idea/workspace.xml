@@ -13,6 +13,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/GameplayRelated/CarMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/Core/Interfaces/IVoiceDetectionManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/GCSR_Examples/GCSR_Example_1/GCSR_Example.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/ControllerRelated/UIController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FrostweepGames/_Generic/Tools/CustomMicrophone.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/GCSpeechRecognition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/GameplayRelated/LoadGame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/Core/Managers/VoiceDetectionManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -26,12 +28,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/Core/Managers/SpeechRecognitionManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/GameplayRelated/CarMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/GameplayRelated/LoadGame.cs" />
         <option value="$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/Core/Managers/VoiceDetectionManager.cs" />
         <option value="$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/Core/Interfaces/IMediaManager.cs" />
         <option value="$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/GCSpeechRecognition.cs" />
+        <option value="$PROJECT_DIR$/Assets/FrostweepGames/_Generic/Tools/CustomMicrophone.cs" />
         <option value="$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/GCSR_Examples/GCSR_DoCommandsExample/GCSR_DoCommandsExample.cs" />
+        <option value="$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/GameplayRelated/CarMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/ControllerRelated/UIController.cs" />
         <option value="$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/Core/Managers/MediaManager.cs" />
       </list>
     </option>

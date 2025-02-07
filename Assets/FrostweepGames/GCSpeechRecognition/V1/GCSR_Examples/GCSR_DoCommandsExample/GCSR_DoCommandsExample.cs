@@ -22,7 +22,7 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1.Examples
 		private Dropdown _languageDropdown;
 
 		private RectTransform _objectForCommand;
-		[SerializeField] private InfiniteRoad carMovement;
+		[SerializeField] private CarMovement carMovement;
 
 		private void Start()
 		{

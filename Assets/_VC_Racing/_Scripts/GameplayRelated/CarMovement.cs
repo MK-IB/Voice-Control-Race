@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class InfiniteRoad : MonoBehaviour
+public class CarMovement : MonoBehaviour
 {
     public GameObject road1;
     public GameObject road2;
@@ -9,17 +9,19 @@ public class InfiniteRoad : MonoBehaviour
     public float roadSpeed = 5f;
 
     private float roadHeight;
+    private Rigidbody2D _rb;
+    [SerializeField] private Transform wheel1, wheel2;
 
     void Start()
     {
-        // Get the height of the road sprite from the bounds
+        _rb = GetComponent<Rigidbody2D>();
         roadHeight = road1.GetComponent<SpriteRenderer>().bounds.size.y;
     }
 
     void Update()
     {
-        MoveRoads();
-        CheckAndRepositionRoads();
+        MoveCar();
+        //CheckAndRepositionRoads();
     }
 
     public void EnableMovement()
@@ -28,11 +30,12 @@ public class InfiniteRoad : MonoBehaviour
         roadSpeed += 1;
     }
 
-    void MoveRoads()
+    void MoveCar()
     {
-        // Move both roads downward
-        road1.transform.Translate(Vector3.down * roadSpeed * Time.deltaTime);
-        road2.transform.Translate(Vector3.down * roadSpeed * Time.deltaTime);
+        _rb.velocity = (Vector2.right * roadSpeed);
+        /*wheel1.Rotate(Vector3.forward * roadSpeed * -50 * Time.deltaTime);
+        wheel2.Rotate(Vector3.forward * roadSpeed * -50 * Time.deltaTime);*/
+        //road2.transform.Translate(Vector3.down * roadSpeed * Time.deltaTime);
     }
 
     void CheckAndRepositionRoads()

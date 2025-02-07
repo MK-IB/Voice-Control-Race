@@ -21,9 +21,7 @@ namespace  _VC_Racing._Scripts.ControllerRelated
 
         void Start()
         {
-            int currentLevel = PlayerPrefs.GetInt("levelnumber", 1);
-            levelNumText.text = "Lv."+currentLevel.ToString();
-            //GAScript.Instance.LevelStart(SceneManager.GetActiveScene().buildIndex.ToString());
+            
         }
         void OnEnable()
         {
