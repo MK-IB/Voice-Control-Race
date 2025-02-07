@@ -4,6 +4,7 @@ using UnityEngine;
 using System.IO;
 using FrostweepGames.Plugins.Core;
 using System.Collections;
+using FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1.Examples;
 using FrostweepGames.Plugins.Native;
 #if FG_MPRO
 using Microphone = FrostweepGames.MicrophonePro.Microphone;
@@ -76,8 +77,8 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1
 		public void Update()
         {
 #if !FG_MPRO || UNITY_EDITOR
-            if (IsRecording)
-            {
+            /*if (IsRecording)
+            {*/
                 _currentSamplePosition = Microphone.GetPosition(MicrophoneDevice);
                 CustomMicrophone.GetData(_currentAudioSamples, 0, _microphoneWorkingAudioClip);
 
@@ -114,6 +115,7 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1
 						
 						Debug.Log("TALK ENDED + ** +");
 						TalkEndedEvent?.Invoke(LastRecordedClip, LastRecordedRaw);
+						_endTalkingDelay = 0;
 						StopRecord();
 					}
                     else if (_isTalking && isTalking)
@@ -127,7 +129,6 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1
                 }
 
                 _previousSamplePosition = _currentSamplePosition;
-            }
 #endif
         }
 
@@ -177,8 +178,8 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1
 
 		public void StartRecord(bool withVoiceDetection = false)
 		{
-			if (IsRecording)
-				return;
+			/*if (IsRecording)
+				return;*/
 
 			if(!ReadyToRecord())
 			{
@@ -218,10 +219,9 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1
 
 		public void StopRecord()
 		{
-			if (!IsRecording || !ReadyToRecord())
-				return;
+			if (!ReadyToRecord()) return;
 
-			IsRecording = false;
+			//IsRecording = false;
 
 			Microphone.End(MicrophoneDevice);
 
@@ -245,6 +245,7 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1
 			_currentRecordingVoice = null;
 
 			RecordEndedEvent?.Invoke(LastRecordedClip, LastRecordedRaw);
+			FindObjectOfType<GCSR_DoCommandsExample>().StartRecordButtonOnClickHandler();
 		}
 
 		public bool ReadyToRecord()

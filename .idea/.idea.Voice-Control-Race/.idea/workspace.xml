@@ -8,17 +8,19 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/Core/Interfaces/ISpeechRecognitionManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/Core/Interfaces/IMediaManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/GameplayRelated/CarMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/Core/Interfaces/IVoiceDetectionManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/GCSR_Examples/GCSR_Example_1/GCSR_Example.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/GCSpeechRecognition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/GameplayRelated/LoadGame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/Core/Managers/VoiceDetectionManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/Core/Managers/MediaManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/GCSR_Examples/GCSR_DoCommandsExample/GCSR_DoCommandsExample.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/Core/Interfaces/IMediaManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/GameplayRelated/CarMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/Core/Model/Model.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/Core/Interfaces/IVoiceDetectionManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FrostweepGames/_Generic/Core/IService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/Core/Managers/SpeechRecognitionManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/GCSpeechRecognition.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/GameplayRelated/LoadGame.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -27,9 +29,9 @@
         <option value="$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/GameplayRelated/CarMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/GameplayRelated/LoadGame.cs" />
         <option value="$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/Core/Managers/VoiceDetectionManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/GCSR_Examples/GCSR_DoCommandsExample/GCSR_DoCommandsExample.cs" />
         <option value="$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/Core/Interfaces/IMediaManager.cs" />
         <option value="$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/GCSpeechRecognition.cs" />
+        <option value="$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/GCSR_Examples/GCSR_DoCommandsExample/GCSR_DoCommandsExample.cs" />
         <option value="$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/Core/Managers/MediaManager.cs" />
       </list>
     </option>

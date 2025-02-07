@@ -88,7 +88,7 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1.Examples
 			_speechRecognition.EndTalkigEvent -= EndTalkigEventHandler;
 		}
 
-		private void StartRecordButtonOnClickHandler()
+		public void StartRecordButtonOnClickHandler()
 		{
 			_startRecordButton.interactable = false;
 			_stopRecordButton.interactable = true;
