@@ -121,7 +121,7 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1.Examples
 
 		private void EndTalkigEventHandler(AudioClip clip, float[] raw)
 		{
-			Debug.Log("REC ENDDDD");
+			Debug.Log("REC ENDDDD = EndTalkigEventHandler() ");
 			FinishedRecordEventHandler(clip, raw);
 			StopRecordButtonOnClickHandler();
 		}

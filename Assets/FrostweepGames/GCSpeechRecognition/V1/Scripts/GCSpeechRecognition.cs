@@ -167,6 +167,7 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1
 				_mediaManager.RequestMicrophonePermission(null);
 
 			_mediaManager.StartRecord(withVoiceDetection);
+			_mediaManager.EnableListening();
 		}
 
 		public void StopRecord()
@@ -177,6 +178,7 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1
 		public void DetectThreshold()
 		{
 			_voiceDetectionManager.DetectThreshold();
+			Debug.Log("DETECTED THRESHOLD");
 		}
 
 		public bool ReadyToRecord()
@@ -277,6 +279,7 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1
 		private void LongRunningRecognizeSuccessEventHandler(Operation operation)
 		{
 			LongRunningRecognizeSuccessEvent?.Invoke(operation);
+			Debug.Log("LONG RUNNING = LongRunningRecognizeSuccessEventHandler() ");
 		}
 
 		private void RecognizeFailedEventHandler(string error)
@@ -287,6 +290,7 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1
 		private void LongRunningRecognizeFailedEventHandler(string error)
 		{
 			LongRunningRecognizeFailedEvent?.Invoke(error);
+			Debug.Log("LONG RUNNING = LongRunningRecognizeFAILEventHandler() ");
 		}
 
 		private void RecordFailedEventHandler()
@@ -297,21 +301,25 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1
 		private void TalkBeganEventHandler()
 		{
 			BeginTalkigEvent?.Invoke();
+			Debug.Log("TALK BEGAN = TalkBeganEventhandler() ");
 		}
 
 		private void TalkEndedEventHandler(AudioClip clip, float[] raw)
 		{
 			EndTalkigEvent?.Invoke(clip, raw);
+			Debug.Log("TALK ENDED = TalkEndedEventHandler()");
 		}
 
 		private void RecordStartedEventHandler()
 		{
 			StartedRecordEvent?.Invoke();
+			Debug.Log("REC STARTED = RecordStartedEventHandler()");
 		}
 
 		private void RecordEndedEventHandler(AudioClip clip, float[] raw)
 		{
 			FinishedRecordEvent?.Invoke(clip, raw);
+			Debug.Log("RecordEndedEventHandler()");
 		}
 
 		private void GetOperationSuccessEventHandler(Operation operation)

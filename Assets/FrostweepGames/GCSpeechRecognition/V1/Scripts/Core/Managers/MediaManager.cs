@@ -10,7 +10,7 @@ using Microphone = FrostweepGames.MicrophonePro.Microphone;
 #endif
 namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1
 {
-    public class MediaManager : IService, IMediaManager
+    public class MediaManager : MonoBehaviour, IService, IMediaManager
     {
 		public const int _Frequency = 16000;
 
@@ -67,7 +67,13 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1
 #endif
         }
 
-        public void Update()
+		public void EnableListening()
+		{
+			IsRecording = true;
+			DetectVoice = true;
+		}
+
+		public void Update()
         {
 #if !FG_MPRO || UNITY_EDITOR
             if (IsRecording)
@@ -93,6 +99,7 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1
 						AddStartAudioSamplesIntoBuffer();
 
 						_isTalking = true;
+						Debug.Log("TALKING + ** +");
 
 						TalkBeganEvent?.Invoke();
 					}
@@ -104,8 +111,10 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1
 						LastRecordedClip = Tools.AudioConvert.Convert(LastRecordedRaw, _microphoneWorkingAudioClip.channels);
 
 						_currentRecordingVoice.Clear();
-
+						
+						Debug.Log("TALK ENDED + ** +");
 						TalkEndedEvent?.Invoke(LastRecordedClip, LastRecordedRaw);
+						StopRecord();
 					}
                     else if (_isTalking && isTalking)
                     {

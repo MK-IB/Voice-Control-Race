@@ -4,7 +4,7 @@ using FrostweepGames.Plugins.Native;
 
 namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1
 {
-    public class VoiceDetectionManager : IService, IVoiceDetectionManager
+    public class VoiceDetectionManager : MonoBehaviour, IService, IVoiceDetectionManager
     {
 		private ISpeechRecognitionManager _speechRecognitionManager;
 
@@ -46,7 +46,6 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1
                 {
                     accum += Mathf.Abs(samples[i]);
                 }
-
                 _threshold = System.Math.Round(accum / (float)samples.Length, 6) * 5;
                 _speechRecognitionManager.CurrentConfig.voiceDetectionThreshold = _threshold;
             }));

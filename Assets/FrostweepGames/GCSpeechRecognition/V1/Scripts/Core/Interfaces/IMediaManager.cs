@@ -30,6 +30,7 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1
 		void SetMicrophoneDevice(string device);
 		string[] GetMicrophoneDevices();
 		void SaveLastRecordedAudioClip(string path);
+		void EnableListening();
 		IEnumerator OneTimeRecord(int durationSec, Action<float[]> callback, int sampleRate = 16000);
 
 #if UNITY_2018_3_OR_NEWER && !NET_2_0 && !NET_2_0_SUBSET
