@@ -219,14 +219,26 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1.Examples
 					break;
 				case "go":
 					Debug.Log("CAR MOVEMENT +++ CALLED:");
-					carMovement.EnableMovement();
-					if(MainController.instance.GameState != GameState.RaceStarted)
-						MainController.instance.SetActionType(GameState.RaceStarted);
+					MoveCar();
+					break;
+				case "start":
+					MoveCar();
+					break;
+				case "vroom":
+					MoveCar();
 					break;
 				default:
 					Debug.Log("NOT FOUND COMMAND IN LIST OF HANDLERS");
 					break;
 			}
 		}
+
+		void MoveCar()
+		{
+			carMovement.EnableMovement();
+			if(MainController.instance.GameState != GameState.RaceStarted)
+				MainController.instance.SetActionType(GameState.RaceStarted);
+		}
+		
 	}
 }

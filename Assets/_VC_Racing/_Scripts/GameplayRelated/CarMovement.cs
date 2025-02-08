@@ -22,6 +22,7 @@ public class CarMovement : MonoBehaviour
     public void ToggleDetectionState(bool state)
     {
         _voiceDetected = state;
+        if (state) _timer = 0;
     }
 
     void Update()
@@ -33,9 +34,10 @@ public class CarMovement : MonoBehaviour
         if (!_voiceDetected)
         {
             _timer += Time.deltaTime;
-            if (_timer >= slowDownDelay)
+            if (_timer >= slowDownDelay && carSpeed > 0)
             {
                 carSpeed -= 0.5f;
+                UIController.instance.UpdateSpeedUi(carSpeed);
                 _timer = 0;
             }
         }

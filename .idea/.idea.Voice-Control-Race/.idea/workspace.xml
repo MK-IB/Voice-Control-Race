@@ -34,13 +34,13 @@
         <option value="$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/Core/Managers/VoiceDetectionManager.cs" />
         <option value="$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/Core/Interfaces/IMediaManager.cs" />
         <option value="$PROJECT_DIR$/Assets/FrostweepGames/_Generic/Tools/CustomMicrophone.cs" />
-        <option value="$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/ControllerRelated/UIController.cs" />
         <option value="$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/ControllerRelated/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/ControllerRelated/MainController.cs" />
         <option value="$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/GCSpeechRecognition.cs" />
         <option value="$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/Scripts/Core/Managers/MediaManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/GCSR_Examples/GCSR_DoCommandsExample/GCSR_DoCommandsExample.cs" />
         <option value="$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/GameplayRelated/CarMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/FrostweepGames/GCSpeechRecognition/V1/GCSR_Examples/GCSR_DoCommandsExample/GCSR_DoCommandsExample.cs" />
+        <option value="$PROJECT_DIR$/Assets/_VC_Racing/_Scripts/ControllerRelated/UIController.cs" />
       </list>
     </option>
   </component>

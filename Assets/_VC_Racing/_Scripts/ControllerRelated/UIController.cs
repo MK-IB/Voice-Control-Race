@@ -36,20 +36,18 @@ namespace  _VC_Racing._Scripts.ControllerRelated
             {
                 HUD.SetActive(false);
                 completePanel.SetActive(true);
-                //GAScript.Instance.LevelCompleted(SceneManager.GetActiveScene().buildIndex.ToString());
             }
             if (newState == GameState.LevelFail)
             {
                 HUD.SetActive(false);
                 failPanel.SetActive(true);
-                //GAScript.Instance.LevelFail(SceneManager.GetActiveScene().buildIndex.ToString());
             }
         }
 
         public void UpdateSpeedUi(float val)
         {
             int speed = (int)val * 10;
-            speedText.text = speed.ToString();
+            speedText.text = speed + " KMH";
         }
     }   
 }
