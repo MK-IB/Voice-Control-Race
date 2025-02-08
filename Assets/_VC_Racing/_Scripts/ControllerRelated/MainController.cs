@@ -6,6 +6,7 @@ namespace _VC_Racing._Scripts.ControllerRelated
     {
         None,
         LevelStart,
+        RaceStarted,
         Running,
         LevelComplete,
         LevelFail

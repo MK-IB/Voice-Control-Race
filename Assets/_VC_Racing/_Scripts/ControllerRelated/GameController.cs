@@ -1,10 +1,19 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 namespace _VC_Racing._Scripts.ControllerRelated
 {
     public class GameController : MonoBehaviour
     {
+        public static GameController instance;
+
+        private void Awake()
+        {
+            instance = this;
+        }
+
         void Start()
         {
         
@@ -14,17 +23,11 @@ namespace _VC_Racing._Scripts.ControllerRelated
         {
             MainController.GameStateChanged += GameManager_GameStateChanged;
         }
-
         void OnDisable()
         {
             MainController.GameStateChanged -= GameManager_GameStateChanged;
         }
-
         void GameManager_GameStateChanged(GameState newState, GameState oldState)
-        {
-            
-        }
-        void Update()
         {
             
         }

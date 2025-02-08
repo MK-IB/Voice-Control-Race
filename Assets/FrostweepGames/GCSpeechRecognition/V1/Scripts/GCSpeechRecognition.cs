@@ -301,13 +301,13 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1
 		private void TalkBeganEventHandler()
 		{
 			BeginTalkigEvent?.Invoke();
-			Debug.Log("TALK BEGAN = TalkBeganEventhandler() ");
 		}
 
 		private void TalkEndedEventHandler(AudioClip clip, float[] raw)
 		{
 			EndTalkigEvent?.Invoke(clip, raw);
 			Debug.Log("TALK ENDED = TalkEndedEventHandler()");
+			
 		}
 
 		private void RecordStartedEventHandler()

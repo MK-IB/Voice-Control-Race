@@ -9,10 +9,7 @@ namespace  _VC_Racing._Scripts.ControllerRelated
         public static UIController instance;
 
         public GameObject HUD, completePanel, failPanel;
-        public Image giantHealthBar;
-        public GameObject giantHealthBarParent;
-        public TextMeshProUGUI levelNumText;
-        public GameObject crowdCounterBubble;
+        public TextMeshProUGUI speedText;
 
         private void Awake()
         {
@@ -47,6 +44,12 @@ namespace  _VC_Racing._Scripts.ControllerRelated
                 failPanel.SetActive(true);
                 //GAScript.Instance.LevelFail(SceneManager.GetActiveScene().buildIndex.ToString());
             }
+        }
+
+        public void UpdateSpeedUi(float val)
+        {
+            int speed = (int)val * 10;
+            speedText.text = speed.ToString();
         }
     }   
 }

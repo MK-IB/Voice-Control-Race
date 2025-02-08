@@ -1,4 +1,5 @@
 ﻿using System;
+using _VC_Racing._Scripts.ControllerRelated;
 using FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.Tools;
 using UnityEngine;
 using UnityEngine.Android;
@@ -121,7 +122,7 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1.Examples
 
 		private void EndTalkigEventHandler(AudioClip clip, float[] raw)
 		{
-			Debug.Log("REC ENDDDD = EndTalkigEventHandler() ");
+			Debug.Log("REC END = EndTalkingEventHandler()");
 			FinishedRecordEventHandler(clip, raw);
 			StopRecordButtonOnClickHandler();
 		}
@@ -167,19 +168,16 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1.Examples
 			_resultText.text = "Detected: ";
 
 			string[] commands = _commandsInputField.text.Split(',');
-
 			foreach (var result in recognitionResponse.results)
 			{
 				foreach (var alternative in result.alternatives)
 				{
 					_resultText.text += "\nIncome text: " + alternative.transcript;
-
 					foreach (var command in commands)
 					{
 						if (command.Trim(' ').ToLowerInvariant() == alternative.transcript.Trim(' ').ToLowerInvariant())
 						{
 							_resultText.text += "\nDid command: " + command + ";"; // debug result command
-
 							DoCommand(command.ToLowerInvariant().TrimEnd(' ').TrimStart(' '));
 						}
 					}
@@ -222,6 +220,8 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1.Examples
 				case "go":
 					Debug.Log("CAR MOVEMENT +++ CALLED:");
 					carMovement.EnableMovement();
+					if(MainController.instance.GameState != GameState.RaceStarted)
+						MainController.instance.SetActionType(GameState.RaceStarted);
 					break;
 				default:
 					Debug.Log("NOT FOUND COMMAND IN LIST OF HANDLERS");

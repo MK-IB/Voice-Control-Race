@@ -53,6 +53,7 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1
 		public AudioClip LastRecordedClip { get; private set; }
 		public float[] LastRecordedRaw { get; private set; }
 		public bool DetectVoice { get; private set; }
+		private CarMovement _carMovement;
 
 		public void Init()
         {
@@ -73,6 +74,11 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1
 			IsRecording = true;
 			DetectVoice = true;
 			Debug.Log("ENABLEDD ** LISTENING");
+		}
+
+		private void Start()
+		{
+			_carMovement = FindObjectOfType<CarMovement>();
 		}
 
 		public void Update()
@@ -105,8 +111,8 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1
 
 						_isTalking = true;
 						Debug.Log("TALKING + ** +");
-
 						TalkBeganEvent?.Invoke();
+						_carMovement.ToggleDetectionState(true);
 					}
 					else if (_isTalking && !isTalking && _endTalkingDelay >= _speechRecognitionManager.CurrentConfig.voiceDetectionEndTalkingDelay)
                     {
@@ -120,6 +126,7 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1
 						Debug.Log("TALK ENDED + ** +");
 						TalkEndedEvent?.Invoke(LastRecordedClip, LastRecordedRaw);
 						_endTalkingDelay = 0;
+						_carMovement.ToggleDetectionState(false);
 						StopRecord();
 					}
                     else if (_isTalking && isTalking)

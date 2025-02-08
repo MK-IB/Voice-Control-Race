@@ -1,62 +1,74 @@
+using _VC_Racing._Scripts.ControllerRelated;
 using UnityEngine;
 
 public class CarMovement : MonoBehaviour
 {
-    public GameObject road1;
-    public GameObject road2;
-
-    // Speed of the road movement
-    public float roadSpeed = 5f;
+    public float carSpeed;
 
     private float roadHeight;
     private Rigidbody2D _rb;
-    [SerializeField] private Transform wheel1, wheel2;
+
+    [SerializeField] private float slowDownDelay = 3f;
+    private float _timer;
+    private bool _raceStarted;
 
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-        roadHeight = road1.GetComponent<SpriteRenderer>().bounds.size.y;
+    }
+
+    private bool _voiceDetected;
+
+    public void ToggleDetectionState(bool state)
+    {
+        _voiceDetected = state;
     }
 
     void Update()
     {
         MoveCar();
-        //CheckAndRepositionRoads();
+
+        if (!_raceStarted)
+            return;
+        if (!_voiceDetected)
+        {
+            _timer += Time.deltaTime;
+            if (_timer >= slowDownDelay)
+            {
+                carSpeed -= 0.5f;
+                _timer = 0;
+            }
+        }
+        else _timer = 0;
+    }
+
+    void OnEnable()
+    {
+        MainController.GameStateChanged += GameManager_GameStateChanged;
+    }
+
+    void OnDisable()
+    {
+        MainController.GameStateChanged -= GameManager_GameStateChanged;
+    }
+
+    void GameManager_GameStateChanged(GameState newState, GameState oldState)
+    {
+        if (newState == GameState.RaceStarted)
+        {
+            _raceStarted = true;
+        }
     }
 
     public void EnableMovement()
     {
         //Debug.Log("CALLED FROM SPEECHHH...");
-        roadSpeed += 1;
+        carSpeed += 1;
+        UIController.instance.UpdateSpeedUi(carSpeed);
     }
 
     void MoveCar()
     {
-        _rb.velocity = (Vector2.right * roadSpeed);
-        /*wheel1.Rotate(Vector3.forward * roadSpeed * -50 * Time.deltaTime);
-        wheel2.Rotate(Vector3.forward * roadSpeed * -50 * Time.deltaTime);*/
-        //road2.transform.Translate(Vector3.down * roadSpeed * Time.deltaTime);
-    }
-
-    void CheckAndRepositionRoads()
-    {
-        // If road1 moves completely out of the screen
-        if (road1.transform.position.y <= -roadHeight - 1.85f)
-        {
-            RepositionRoad(road1, road2);
-        }
-
-        // If road2 moves completely out of the screen
-        if (road2.transform.position.y <= -roadHeight - 1.85f)
-        {
-            RepositionRoad(road2, road1);
-        }
-    }
-
-    void RepositionRoad(GameObject roadToMove, GameObject referenceRoad)
-    {
-        // Perfectly reposition the road above the reference road
-        float newYPosition = referenceRoad.transform.position.y + roadHeight - 0.01f; // Slight overlap to avoid gaps
-        roadToMove.transform.position = new Vector3(referenceRoad.transform.position.x, newYPosition, referenceRoad.transform.position.z);
+        _rb.velocity = (Vector2.right * carSpeed);
     }
 }
