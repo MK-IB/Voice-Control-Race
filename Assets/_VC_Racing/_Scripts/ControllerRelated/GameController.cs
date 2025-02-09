@@ -8,6 +8,13 @@ namespace _VC_Racing._Scripts.ControllerRelated
     public class GameController : MonoBehaviour
     {
         public static GameController instance;
+        public float timeRemaining = 30f;
+        private bool timerIsRunning = true;
+
+        private UIController _uiController;
+        
+        public Camera mainCamera;
+        private Transform _platformsParent;
 
         private void Awake()
         {
@@ -16,7 +23,20 @@ namespace _VC_Racing._Scripts.ControllerRelated
 
         void Start()
         {
-        
+            _uiController = UIController.instance;
+            _platformsParent = GameObject.Find("Platform").transform;
+            mainCamera = Camera.main;
+            SetToBottomLeft();
+            int screenHeight = Screen.height;
+            int screenWidth = Screen.width;
+        }
+        void SetToBottomLeft()
+        {
+            Vector3 bottomLeftViewport = new Vector3(0, 0, mainCamera.nearClipPlane);
+            Vector3 worldPosition = mainCamera.ViewportToWorldPoint(bottomLeftViewport);
+            
+            worldPosition.z = transform.position.z;
+            _platformsParent.position = worldPosition;
         }
 
         void OnEnable()
@@ -30,6 +50,29 @@ namespace _VC_Racing._Scripts.ControllerRelated
         void GameManager_GameStateChanged(GameState newState, GameState oldState)
         {
             
+        }
+
+        private void Update()
+        {
+            if (timerIsRunning)
+            {
+                if (timeRemaining > 0)
+                {
+                    timeRemaining -= Time.deltaTime;
+                    _uiController.UpdateTimerText(timeRemaining);
+                }
+                else
+                {
+                    timeRemaining = 0;
+                    timerIsRunning = false;
+                    GameFail();
+                }
+            }
+        }
+
+        void GameFail()
+        {
+            MainController.instance.SetActionType(GameState.LevelFail);
         }
         public void On_RestartButtonPressed()
         {

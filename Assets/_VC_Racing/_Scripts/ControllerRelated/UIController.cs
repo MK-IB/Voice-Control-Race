@@ -9,7 +9,7 @@ namespace  _VC_Racing._Scripts.ControllerRelated
         public static UIController instance;
 
         public GameObject HUD, completePanel, failPanel;
-        public TextMeshProUGUI speedText;
+        public TextMeshProUGUI speedText, timerText;
 
         private void Awake()
         {
@@ -49,5 +49,19 @@ namespace  _VC_Racing._Scripts.ControllerRelated
             int speed = (int)val * 10;
             speedText.text = speed + " KMH";
         }
+
+        public void UpdateTimerText(float timeToDisplay)
+        {
+            timeToDisplay = Mathf.Max(0, timeToDisplay);
+            
+            int minutes = Mathf.FloorToInt(timeToDisplay / 60);
+            int seconds = Mathf.FloorToInt(timeToDisplay % 60);
+            if (timeToDisplay <= 20f)
+            {
+                timerText.color = Color.red;
+            }
+            timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        }
+        
     }   
 }

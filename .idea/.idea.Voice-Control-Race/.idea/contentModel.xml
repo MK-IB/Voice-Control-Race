@@ -25,6 +25,11 @@
             </e>
           </e>
         </e>
+        <e p="Fonts" t="Include">
+          <e p="fredoka-one" t="Include">
+            <e p="OFL.txt" t="Include" />
+          </e>
+        </e>
         <e p="FrostweepGames" t="Include">
           <e p="_Generic" t="Include">
             <e p="Core" t="Include">
