@@ -60,8 +60,10 @@
       <Path>.idea</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
+      <Path>Temp</Path>
       <Path>UserSettings</Path>
       <Path>VC_Car_BurstDebugInformation_DoNotShip</Path>
+      <Path>Voice Control Race_BurstDebugInformation_DoNotShip</Path>
       <Path>obj</Path>
     </explicitExcludes>
   </component>

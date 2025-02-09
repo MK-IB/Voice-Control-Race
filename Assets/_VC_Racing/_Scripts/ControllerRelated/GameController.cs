@@ -1,4 +1,5 @@
 using System;
+using _JohnyTrigger._Scripts.ControllerRelated;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
@@ -49,7 +50,7 @@ namespace _VC_Racing._Scripts.ControllerRelated
         }
         void GameManager_GameStateChanged(GameState newState, GameState oldState)
         {
-            
+            timerIsRunning = newState != GameState.LevelComplete || newState != GameState.LevelFail;
         }
 
         private void Update()
@@ -72,10 +73,12 @@ namespace _VC_Racing._Scripts.ControllerRelated
 
         void GameFail()
         {
+            if (MainController.instance.GameState == GameState.LevelComplete) return;
             MainController.instance.SetActionType(GameState.LevelFail);
         }
         public void On_RestartButtonPressed()
         {
+            SoundsController.instance.PlaySound(SoundsController.instance.buttonClick);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         public void On_NextButtonPressed()

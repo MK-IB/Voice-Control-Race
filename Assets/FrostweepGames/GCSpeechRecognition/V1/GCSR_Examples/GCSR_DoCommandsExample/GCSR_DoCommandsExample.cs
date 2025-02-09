@@ -1,6 +1,7 @@
 ﻿using System;
 using _VC_Racing._Scripts.ControllerRelated;
 using FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.Tools;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Android;
 using UnityEngine.UI;
@@ -18,12 +19,13 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1.Examples
 
 		private InputField _commandsInputField;
 
-		private Text _resultText;
+		[SerializeField] private TextMeshProUGUI _resultText;
 
 		private Dropdown _languageDropdown;
 
 		private RectTransform _objectForCommand;
 		[SerializeField] private CarMovement carMovement;
+		private SpeechStateVisual _speechStateVisual;
 
 		private void Start()
 		{
@@ -37,12 +39,12 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1.Examples
 
 			_speechRecognition.EndTalkigEvent += EndTalkigEventHandler;
 
+
+			_speechStateVisual = FindObjectOfType<SpeechStateVisual>();
 			_startRecordButton = transform.Find("Canvas/Button_StartRecord").GetComponent<Button>();
 			_stopRecordButton = transform.Find("Canvas/Button_StopRecord").GetComponent<Button>();
 
 			_speechRecognitionState = transform.Find("Canvas/Image_RecordState").GetComponent<Image>();
-
-			_resultText = transform.Find("Canvas/Text_Result").GetComponent<Text>();
 
 			_commandsInputField = transform.Find("Canvas/InputField_Commands").GetComponent<InputField>();
 
@@ -74,6 +76,8 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1.Examples
 			{
 				_speechRecognition.SetMicrophoneDevice(_speechRecognition.GetMicrophoneDevices()[0]);
 			}
+
+			_canDetect = true;
 			StartRecordButtonOnClickHandler();
 		}
 
@@ -108,12 +112,14 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1.Examples
 
 		private void StartedRecordEventHandler()
 		{
-			_speechRecognitionState.color = Color.red;
+			//_speechRecognitionState.color = Color.red;
+			_speechStateVisual.UpdateRecStatus(true);
 		}
 
 		private void RecordFailedEventHandler()
 		{
-			_speechRecognitionState.color = Color.yellow;
+			//_speechRecognitionState.color = Color.yellow;
+			_speechStateVisual.UpdateRecStatus(false);
 			_resultText.text = "<color=red>Start record Failed. Please check microphone device and try again.</color>";
 
 			_stopRecordButton.interactable = false;
@@ -132,7 +138,8 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1.Examples
 			if (_startRecordButton.interactable)
 			{
 			}
-			_speechRecognitionState.color = Color.yellow;
+			//_speechRecognitionState.color = Color.yellow;
+			_speechStateVisual.UpdateRecStatus(false);
 
 			if (clip == null)
 				return;
@@ -165,19 +172,19 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1.Examples
 
 		private void RecognizeSuccessEventHandler(RecognitionResponse recognitionResponse)
 		{
-			_resultText.text = "Detected: ";
+			//_resultText.text = "Detected: ";
 
 			string[] commands = _commandsInputField.text.Split(',');
 			foreach (var result in recognitionResponse.results)
 			{
 				foreach (var alternative in result.alternatives)
 				{
-					_resultText.text += "\nIncome text: " + alternative.transcript;
+					//_resultText.text += "\nIncome text: " + alternative.transcript;
 					foreach (var command in commands)
 					{
 						if (command.Trim(' ').ToLowerInvariant() == alternative.transcript.Trim(' ').ToLowerInvariant())
 						{
-							_resultText.text += "\nDid command: " + command + ";"; // debug result command
+							//_resultText.text += "\nDid command: " + command + ";"; // debug result command
 							DoCommand(command.ToLowerInvariant().TrimEnd(' ').TrimStart(' '));
 						}
 					}
@@ -185,8 +192,23 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1.Examples
 			}
 		}
 
+		private bool _canDetect;
+		void OnEnable()
+		{
+			MainController.GameStateChanged += GameManager_GameStateChanged;
+		}
+		void OnDisable()
+		{
+			MainController.GameStateChanged -= GameManager_GameStateChanged;
+		}
+		void GameManager_GameStateChanged(GameState newState, GameState oldState)
+		{
+			_canDetect = newState != GameState.LevelComplete || newState != GameState.LevelFail;
+		}
+
 		private void DoCommand(string command)
 		{
+			if (!_canDetect) return;
 			float speed = 10;
 			float scaleSpeed = 0.1f;
 
@@ -235,6 +257,7 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition.V1.Examples
 
 		void MoveCar()
 		{
+			_resultText.text = "Detected";
 			carMovement.EnableMovement();
 			if(MainController.instance.GameState != GameState.RaceStarted)
 				MainController.instance.SetActionType(GameState.RaceStarted);

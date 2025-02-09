@@ -12,18 +12,55 @@
             <e p="ControllerRelated" t="Include">
               <e p="GameController.cs" t="Include" />
               <e p="MainController.cs" t="Include" />
+              <e p="SoundsController.cs" t="Include" />
               <e p="UIController.cs" t="Include" />
             </e>
             <e p="GameplayRelated" t="Include">
               <e p="CarMovement.cs" t="Include" />
+              <e p="HelpElement.cs" t="Include" />
               <e p="LoadGame.cs" t="Include" />
             </e>
             <e p="SpeechRelated" t="Include">
               <e p="AudioRecorder.cs" t="Include" />
               <e p="CarController.cs" t="Include" />
               <e p="GoogleSpeechToText.cs" t="Include" />
+              <e p="SpeechStateVisual.cs" t="Include" />
             </e>
           </e>
+        </e>
+        <e p="Demigiant" t="Include">
+          <e p="DemiLib" t="Include">
+            <e p="Core" t="Include">
+              <e p="DemiLib.xml" t="Include" />
+              <e p="Editor" t="Include">
+                <e p="DemiEditor.xml" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="DOTween" t="Include">
+            <e p="Modules" t="Include">
+              <e p="DOTweenModuleAudio.cs" t="Include" />
+              <e p="DOTweenModulePhysics.cs" t="Include" />
+              <e p="DOTweenModulePhysics2D.cs" t="Include" />
+              <e p="DOTweenModuleSprite.cs" t="Include" />
+              <e p="DOTweenModuleUI.cs" t="Include" />
+              <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+              <e p="DOTweenModuleUtils.cs" t="Include" />
+            </e>
+            <e p="README.txt" t="Include" />
+          </e>
+          <e p="DOTweenPro" t="Include">
+            <e p="DOTweenAnimation.cs" t="Include" />
+            <e p="DOTweenProShortcuts.cs" t="Include" />
+            <e p="DOTweenTextMeshPro.cs" t="Include" />
+            <e p="DOTweenTk2d.cs" t="Include" />
+            <e p="Editor" t="Include">
+              <e p="DOTweenAnimationInspector.cs" t="Include" />
+              <e p="DOTweenPreviewManager.cs" t="Include" />
+            </e>
+            <e p="README.txt" t="Include" />
+          </e>
+          <e p="readme_DOTweenPro.txt" t="Include" />
         </e>
         <e p="Fonts" t="Include">
           <e p="fredoka-one" t="Include">

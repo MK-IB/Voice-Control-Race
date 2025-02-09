@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GCSpeechRecognitonConfig
   m_EditorClassIdentifier: 
   voiceDetectionThreshold: 0.1
-  voiceDetectionEndTalkingDelay: 1
+  voiceDetectionEndTalkingDelay: 0.25
   useVolumeMultiplier: 0
   audioVolumeMultiplier: 2
   enabledAPIKeyValidation: 0
